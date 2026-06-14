@@ -97,9 +97,10 @@
             .support-box { width: 100% !important; }
         }
 
-        /* --- Hero Section Banner with Animations --- */
+        /* --- Futuristic Hero Section Banner with Canvas Background --- */
         .hero {
-            background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.85)), url('https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1500&q=80') no-repeat center center/cover;
+            position: relative;
+            background: #0f172a; /* Tech-Navy Solid Base */
             min-height: 55vh;
             display: flex;
             flex-direction: column;
@@ -108,6 +109,28 @@
             text-align: center;
             color: #ffffff;
             padding: 40px 20px;
+            overflow: hidden;
+        }
+
+        /* JavaScript Matrix Canvas Styling */
+        #matrixCanvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.15; /* Subtle blend background layer */
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2; /* Sits sharply over the background grid matrix */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
 
         .hero h1 {
@@ -374,8 +397,11 @@
     </nav>
 
     <section class="hero" id="home">
-        <h1>Keep calm and let our engineers handle it.</h1>
-        <p>Premium IT Forest is your elite technology companion, providing mission-critical infrastructure deployments and dependable system engineering across Kolkata.</p>
+        <canvas id="matrixCanvas"></canvas>
+        <div class="hero-content">
+            <h1>Keep calm and let our engineers handle it.</h1>
+            <p>Premium IT Forest is your elite technology companion, providing mission-critical infrastructure deployments and dependable system engineering across Kolkata.</p>
+        </div>
     </section>
 
     <section class="section-container" id="about">
@@ -506,6 +532,56 @@
             <div>SEO Managed Infrastructure via GitHub</div>
         </div>
     </footer>
+
+    <script>
+        const canvas = document.getElementById('matrixCanvas');
+        const ctx = canvas.getContext('2d');
+
+        // Dynamically track and set hero area container boundary metrics
+        function resizeCanvas() {
+            const heroSection = canvas.parentElement;
+            canvas.width = heroSection.offsetWidth;
+            canvas.height = heroSection.offsetHeight;
+        }
+        resizeCanvas();
+        window.addEventListener('resize', resizeCanvas);
+
+        // Binary and digital matrix array characters
+        const scriptChars = "01010101010101010101ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+        const charArr = scriptChars.split("");
+
+        const fontSize = 14;
+        const columns = canvas.width / fontSize;
+
+        // Keep matrix frame vertical positions localized array tracking
+        const rainDrops = [];
+        for (let x = 0; x < columns; x++) {
+            rainDrops[x] = 1;
+        }
+
+        function drawMatrix() {
+            // High-precision fade blend alpha parameter to keep matrix trail looking fluid
+            ctx.fillStyle = 'rgba(15, 23, 42, 0.06)';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            // Set matrix text rendering colors to match secondary cyan branding theme
+            ctx.fillStyle = '#00d2ff'; 
+            ctx.font = fontSize + 'px monospace';
+
+            for (let i = 0; i < rainDrops.length; i++) {
+                const text = charArr[Math.floor(Math.random() * charArr.length)];
+                ctx.fillText(text, i * fontSize, rainDrops[i] * fontSize);
+
+                if (rainDrops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+                    rainDrops[i] = 0;
+                }
+                rainDrops[i]++;
+            }
+        }
+
+        // Run render loop frame cycle optimized for clean browser presentation
+        setInterval(drawMatrix, 33);
+    </script>
 
 </body>
 </html>
