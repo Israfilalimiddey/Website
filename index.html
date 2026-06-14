@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Premium IT Forest | Enterprise IT Support & Surveillance Kolkata</title>
     <meta name="description" content="Premium IT Forest provides elite IT infrastructure support, laptop/desktop repairs, server management, firewalls, CCTV setup, and biometric systems in Kolkata.">
-    
+   
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
@@ -16,6 +16,11 @@
             --dark: #1e293b;
             --light: #f8fafc;
             --gray: #64748b;
+            
+            /* High Contrast Pop Additions */
+            --vibrant-navy: #0f172a;
+            --vibrant-blue: #0284c7;
+            --vibrant-accent: #38bdf8;
         }
 
         * {
@@ -32,7 +37,7 @@
             overflow-x: hidden;
         }
 
-        /* --- Navigation Bar --- */
+        /* --- Navigation Bar (EXACTLY AS YOU PROVIDED IT - NO CHANGES) --- */
         nav {
             background: #ffffff;
             display: flex;
@@ -86,13 +91,13 @@
             }
             nav ul li { margin-left: 0; }
             nav ul li a { font-size: 14px; }
-            
+           
             .hero h1 { font-size: 32px !important; }
             .hero p { font-size: 15px !important; }
             .support-box { width: 100% !important; }
         }
 
-        /* --- Static Hero Section Banner --- */
+        /* --- Static Hero Section Banner (EXACTLY AS YOU PROVIDED IT) --- */
         .hero {
             background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.85)), url('https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1500&q=80') no-repeat center center/cover;
             min-height: 55vh;
@@ -119,14 +124,14 @@
             color: #e2e8f0;
         }
 
-        /* --- Global Sections Layout --- */
+        /* --- EYE-CATCHING STYLING STARTS DIRECTLY HERE --- */
         .section-container {
-            padding: 60px 8%;
+            padding: 70px 8%;
             text-align: center;
         }
 
         .section-title {
-            font-size: 28px;
+            font-size: 32px;
             font-weight: 700;
             color: var(--primary);
             margin-bottom: 10px;
@@ -138,33 +143,35 @@
         .section-title::after {
             content: '';
             display: block;
-            width: 50%;
-            height: 3px;
+            width: 60%;
+            height: 4px;
             background: var(--secondary);
             margin: 8px auto 0 auto;
+            border-radius: 2px;
         }
 
         .section-subtitle {
-            color: var(--gray);
-            font-size: 15px;
+            color: #475569;
+            font-size: 16px;
             max-width: 750px;
             margin: 0 auto 40px auto;
+            font-weight: 400;
         }
 
-        /* --- PREMIUM IMAGE-BASED SERVICES GRID --- */
+        /* --- EYE-CATCHING GRADIENT SERVICE CARDS --- */
         .premium-services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 20px;
+            gap: 25px;
             padding: 20px 0;
         }
 
         .premium-service-card {
             position: relative;
-            height: 200px;
-            border-radius: 4px;
+            height: 220px;
+            border-radius: 8px;
             overflow: hidden;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            box-shadow: 0 6px 15px rgba(15, 23, 42, 0.1);
             background-size: cover;
             background-position: center;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -172,64 +179,138 @@
             align-items: center;
             justify-content: center;
             text-decoration: none;
+            border: 1px solid rgba(0,0,0,0.05);
         }
 
         .premium-service-card:hover {
             transform: scale(1.03);
-            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            box-shadow: 0 12px 25px rgba(0, 86, 179, 0.25);
         }
 
         .premium-service-card .text-banner {
             position: absolute;
-            bottom: 30px;
+            bottom: 0;
             left: 0;
-            background: rgba(0, 0, 0, 0.75);
+            background: linear-gradient(to right, rgba(15, 23, 42, 0.95), rgba(0, 86, 179, 0.85));
             color: #ffffff;
-            width: 80%;
-            padding: 10px 20px;
-            font-weight: 600;
+            width: 100%;
+            padding: 15px 20px;
+            font-weight: 700;
             font-size: 16px;
             text-transform: uppercase;
             letter-spacing: 1px;
             text-align: left;
-            border-left: 4px solid var(--secondary);
+            border-top: 2px solid var(--secondary);
         }
 
-        /* --- CLEAN STATIC SUPPORT BOX COMPONENT --- */
+        /* --- Team Grid Section --- */
+        .team-section { background: var(--light); padding: 50px 8%; }
+        .team-grid { display: flex; justify-content: center; gap: 50px; flex-wrap: wrap; margin-top: 20px; }
+        .team-card { text-align: center; padding: 25px 45px; background: #ffffff; border-radius: 8px; min-width: 260px; border-top: 4px solid var(--primary); box-shadow: 0 4px 15px rgba(0,0,0,0.04); border: 1px solid #e2e8f0; }
+        .team-card h3 { font-size: 20px; color: var(--dark); font-weight: 600; margin-bottom: 5px; }
+        .team-card p { font-size: 13px; color: var(--primary); font-weight: 500; text-transform: uppercase; letter-spacing: 1px; }
+
+        /* --- VIBRANT HIGH-CONTRAST "WHY CHOOSE US" BACKGROUND --- */
+        .why-choose-us { 
+            background: linear-gradient(135deg, var(--vibrant-navy), #1e293b) !important;
+            color: #ffffff;
+        }
+
+        .why-choose-us .section-title {
+            color: #ffffff;
+        }
+
+        .why-choose-us .section-title::after {
+            background: var(--secondary);
+        }
+
+        .why-choose-us .section-subtitle {
+            color: #cbd5e1;
+        }
+
+        .highlights-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
+        
+        .highlight-item { 
+            background: #ffffff !important; 
+            padding: 40px 25px; 
+            border-radius: 12px; 
+            border: 1px solid #cbd5e1;
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3) !important;
+        }
+
+        .highlight-item h3 {
+            font-size: 19px;
+            font-weight: 700;
+            color: var(--vibrant-navy);
+            margin-bottom: 12px;
+            text-transform: uppercase;
+        }
+
+        .highlight-item .badge-icon { 
+            width: 70px; 
+            height: 70px; 
+            background: #e0f2fe !important; 
+            color: var(--vibrant-blue) !important; 
+            border-radius: 50%; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            font-size: 26px; 
+            margin: 0 auto 20px auto; 
+            border: 2px solid #93c5fd;
+            box-shadow: 0 4px 10px rgba(0, 86, 179, 0.15);
+        }
+
+        .highlight-item p {
+            font-size: 14px;
+            color: #334155 !important;
+        }
+
+        /* --- Logo Slider --- */
+        .marquee-wrapper { overflow: hidden; width: 100%; background: #ffffff; padding: 25px 0; }
+        .marquee-content { display: flex; width: max-content; animation: scrollMarquee 25s linear infinite; }
+        .marquee-content h4 { font-size: 24px; font-weight: 600; color: #cbd5e1; padding: 0 50px; letter-spacing: 2px; text-transform: uppercase; }
+        @keyframes scrollMarquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+
+        /* --- HIGH VISIBILITY SUPPORT DESK PORTAL --- */
         .support-section {
-            background-color: #f1f5f9;
+            background-color: var(--light);
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
+            border-top: 1px solid #cbd5e1;
         }
 
         .support-box {
             width: 480px;
             background: #ffffff;
-            border: 1px solid #e2e8f0;
+            border: 2px solid var(--vibrant-blue);
             border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
         }
 
         .support-header-title {
-            padding: 25px 20px 15px 20px;
+            background: linear-gradient(135deg, var(--vibrant-navy), var(--primary));
+            padding: 22px;
             font-size: 26px;
             font-weight: 800;
             letter-spacing: 1px;
-            color: #1e293b;
+            color: #ffffff;
             text-transform: uppercase;
+            text-align: center;
         }
 
         .support-header-title span {
-            color: #0284c7;
+            color: var(--secondary);
         }
 
         .support-row-item {
             border-top: 1px solid #f1f5f9;
             background: #ffffff;
-            padding: 16px 20px;
+            padding: 18px 25px;
             font-size: 16px;
             font-weight: 600;
             color: #475569;
@@ -238,7 +319,7 @@
         .support-action-body {
             border-top: 1px solid #f1f5f9;
             background: #fafafa;
-            padding: 40px 20px;
+            padding: 35px 20px;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -252,11 +333,11 @@
             background: #0284c7;
             color: #ffffff;
             text-decoration: none;
-            padding: 14px 35px;
+            padding: 15px 40px;
             border-radius: 6px;
-            font-weight: 600;
-            font-size: 15px;
-            box-shadow: 0 4px 12px rgba(2, 132, 199, 0.3);
+            font-weight: 700;
+            font-size: 16px;
+            box-shadow: 0 4px 14px rgba(2, 132, 199, 0.35);
             transition: background 0.3s, transform 0.2s;
         }
 
@@ -264,25 +345,6 @@
             background: #0369a1;
             transform: translateY(-2px);
         }
-
-        /* --- Leadership Grid --- */
-        .team-section { background: #ffffff; padding: 40px 8%; }
-        .team-grid { display: flex; justify-content: center; gap: 60px; flex-wrap: wrap; margin-top: 20px; }
-        .team-card { text-align: center; padding: 20px 40px; background: var(--light); border-radius: 6px; min-width: 240px; border-top: 3px solid var(--primary); box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
-        .team-card h3 { font-size: 19px; color: var(--dark); font-weight: 600; margin-bottom: 5px; }
-        .team-card p { font-size: 14px; color: var(--primary); font-weight: 500; text-transform: uppercase; letter-spacing: 1px; }
-
-        /* --- Highlights --- */
-        .why-choose-us { background: var(--light); }
-        .highlights-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
-        .highlight-item { background: #ffffff; padding: 35px 25px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.03); border: 1px solid rgba(0,0,0,0.05); }
-        .highlight-item .badge-icon { width: 70px; height: 70px; background: rgba(0, 86, 179, 0.1); color: var(--primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px; margin: 0 auto 20px auto; }
-
-        /* --- Logo Slider --- */
-        .marquee-wrapper { overflow: hidden; width: 100%; background: #ffffff; padding: 20px 0; }
-        .marquee-content { display: flex; width: max-content; animation: scrollMarquee 25s linear infinite; }
-        .marquee-content h4 { font-size: 24px; font-weight: 600; color: #cbd5e1; padding: 0 50px; letter-spacing: 2px; text-transform: uppercase; }
-        @keyframes scrollMarquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
 
         /* --- Footer --- */
         footer { background: var(--dark); color: #ffffff; padding: 60px 8% 20px 8%; }
@@ -318,10 +380,10 @@
         </p>
     </section>
 
-    <section class="section-container" id="services" style="background: #ffffff; padding-bottom: 30px;">
+    <section class="section-container" id="services" style="background: #ffffff; padding-bottom: 40px;">
         <h2 class="section-title">Our Services</h2>
         <p class="section-subtitle">Comprehensive design, optimization, and hardware integration services built to scale.</p>
-        
+       
         <div class="premium-services-grid">
             <div class="premium-service-card" style="background-image: url('https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=500&q=80');">
                 <div class="text-banner">Server</div>
@@ -378,22 +440,22 @@
             <div class="highlight-item">
                 <div class="badge-icon"><i class="fa-solid fa-indian-rupee-sign"></i></div>
                 <h3>No Fix, No Fee</h3>
-                <p style="font-size:13px; color:var(--gray); margin-top:10px;">Absolute transparency. You only settle commercial service billing once parameters are successfully verified.</p>
+                <p>Absolute transparency. You only settle commercial service billing once parameters are successfully verified.</p>
             </div>
             <div class="highlight-item">
                 <div class="badge-icon"><i class="fa-solid fa-bolt"></i></div>
                 <h3>Rapid SLA Response</h3>
-                <p style="font-size:13px; color:var(--gray); margin-top:10px;">Minimizing operations downtime with prompt diagnostic field dispatches directly to your commercial footprint.</p>
+                <p>Minimizing operations downtime with prompt diagnostic field dispatches directly to your commercial footprint.</p>
             </div>
             <div class="highlight-item">
                 <div class="badge-icon"><i class="fa-solid fa-shield-heart"></i></div>
                 <h3>30-Day Support Warranty</h3>
-                <p style="font-size:13px; color:var(--gray); margin-top:10px;">Every deployment or architecture overhaul comes backed by a comprehensive tracking warranty.</p>
+                <p>Every deployment or architecture overhaul comes backed by a comprehensive tracking warranty.</p>
             </div>
         </div>
     </section>
 
-    <section class="section-container" style="padding-bottom: 40px; background: #fafafa;">
+    <section class="section-container" style="padding-bottom: 40px; background: #ffffff;">
         <h2 class="section-title">Strategic Networks</h2>
         <p class="section-subtitle">Providing cross-platform hardware sales, authentic product sourcing, and system support.</p>
         <div class="marquee-wrapper">
@@ -407,8 +469,8 @@
     <section class="section-container support-section">
         <div class="support-box">
             <div class="support-header-title"><span>SUP</span>PORT</div>
-            <div class="support-row-item">Help Desk Ticket</div>
-            <div class="support-row-item">Call Login</div>
+            <div class="support-row-item"><i class="fa-solid fa-ticket" style="color:var(--vibrant-blue); margin-right:12px;"></i> Help Desk Ticket</div>
+            <div class="support-row-item"><i class="fa-solid fa-phone-volume" style="color:var(--vibrant-blue); margin-right:12px;"></i> Call Login</div>
             <div class="support-action-body">
                 <a href="https://docs.google.com/forms/d/e/1FAIpQLSfChdLo9103W4ZGvFJMFnxwckmSRQs17TkSWTezWCtTxurP6Q/viewform?usp=header" target="_blank" class="login-btn-link">
                     Click to Login <i class="fa-solid fa-circle-arrow-right"></i>
