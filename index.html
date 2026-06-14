@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium IT Forest | Enterprise IT Support & Surveillance Kolkata</title>
+    <meta name="description" content="Premium IT Forest provides elite IT infrastructure support, laptop/desktop repairs, server management, firewalls, CCTV setup, and biometric systems in Kolkata.">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary: #0056b3;
+            --secondary: #00d2ff;
+            --dark: #1e293b;
+            --light: #f8fafc;
+            --gray: #64748b;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #ffffff;
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
+        /* --- Navigation Bar --- */
+        nav {
+            background: #ffffff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 8%;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-weight: 700;
+            font-size: 22px;
+            color: var(--primary);
+        }
+
+        .logo span { color: var(--secondary); }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li { margin-left: 30px; }
+
+        nav ul li a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover { color: var(--primary); }
+
+        /* --- Hero Banner Section --- */
+        .hero {
+            background: linear-gradient(rgba(30, 41, 59, 0.85), rgba(30, 41, 59, 0.85)), url('https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1500&q=80') no-repeat center center/cover;
+            height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #ffffff;
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            font-weight: 300;
+            max-width: 600px;
+        }
+
+        /* --- Global Sections Layout --- */
+        .section-container {
+            padding: 60px 8%;
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 50%;
+            height: 3px;
+            background: var(--secondary);
+            margin: 8px auto 0 auto;
+        }
+
+        .section-subtitle {
+            color: var(--gray);
+            font-size: 15px;
+            max-width: 750px;
+            margin: 0 auto 40px auto;
+        }
+
+        /* --- PREMIUM IMAGE-BASED SERVICES GRID --- */
+        .premium-services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+            padding: 20px 0;
+        }
+
+        .premium-service-card {
+            position: relative;
+            height: 200px;
+            border-radius: 4px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            background-size: cover;
+            background-position: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+        }
+
+        .premium-service-card:hover {
+            transform: scale(1.03);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        }
+
+        .premium-service-card .text-banner {
+            position: absolute;
+            bottom: 30px;
+            left: 0;
+            background: rgba(0, 0, 0, 0.75);
+            color: #ffffff;
+            width: 80%;
+            padding: 10px 20px;
+            font-weight: 600;
+            font-size: 16px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-align: left;
+            border-left: 4px solid var(--secondary);
+        }
+
+        /* --- Clean Leadership Text Grid Layout --- */
+        .team-section {
+            background: #ffffff;
+            padding: 40px 8%;
+        }
+
+        .team-grid {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .team-card {
+            text-align: center;
+            padding: 20px 40px;
+            background: var(--light);
+            border-radius: 6px;
+            min-width: 240px;
+            border-top: 3px solid var(--primary);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+        }
+
+        .team-card h3 {
+            font-size: 19px;
+            color: var(--dark);
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .team-card p {
+            font-size: 14px;
+            color: var(--primary);
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* --- Grid Component: Core Highlights --- */
+        .why-choose-us {
+            background: var(--light);
+        }
+
+        .highlights-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .highlight-item {
+            background: #ffffff;
+            padding: 35px 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .highlight-item .badge-icon {
+            width: 70px;
+            height: 70px;
+            background: rgba(0, 86, 179, 0.1);
+            color: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            margin: 0 auto 20px auto;
+        }
+
+        /* --- Continuous Logo Marquee Component --- */
+        .marquee-wrapper {
+            overflow: hidden;
+            width: 100%;
+            background: #ffffff;
+            padding: 20px 0;
+            position: relative;
+        }
+
+        .marquee-content {
+            display: flex;
+            width: max-content;
+            animation: scrollMarquee 25s linear infinite;
+        }
+
+        .marquee-content h4 {
+            font-size: 24px;
+            font-weight: 600;
+            color: #cbd5e1;
+            padding: 0 50px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        @keyframes scrollMarquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        /* --- Footer & Directory Details --- */
+        footer {
+            background: var(--dark);
+            color: #ffffff;
+            padding: 60px 8% 20px 8%;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+            text-align: left;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h3 {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: #ffffff;
+            position: relative;
+        }
+
+        .footer-col h3::after {
+            content: '';
+            display: block;
+            width: 30px;
+            height: 2px;
+            background: var(--secondary);
+            margin-top: 5px;
+        }
+
+        .footer-col p {
+            color: #94a3b8;
+            font-size: 14px;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+        }
+
+        .footer-col p i {
+            margin-right: 12px;
+            color: var(--secondary);
+            font-size: 16px;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #334155;
+            padding-top: 20px;
+            font-size: 13px;
+            color: #64748b;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">Premium <span>IT Forest</span></div>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero" id="home">
+        <h1>Keep calm and let our engineers handle it.</h1>
+        <p>Premium IT Forest is your elite technology companion, providing mission-critical infrastructure deployments and dependable system engineering across Kolkata.</p>
+    </section>
+
+    <section class="section-container" id="about">
+        <h2 class="section-title">About Company</h2>
+        <p class="section-subtitle">
+            Welcome to Premium IT Forest — your trusted enterprise partner for comprehensive technology sales, infrastructure management, and managed IT support. Based in Kolkata, we house a team of certified, highly qualified technicians specializing in systemic diagnostics, hardware deployment, and precision architecture.
+        </p>
+    </section>
+
+    <section class="section-container" id="services" style="background: #ffffff; padding-bottom: 30px;">
+        <h2 class="section-title">Our Services</h2>
+        <p class="section-subtitle">Comprehensive design, optimization, and hardware integration services built to scale.</p>
+        
+        <div class="premium-services-grid">
+            <div class="premium-service-card" style="background-image: url('https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=500&q=80');">
+                <div class="text-banner">Server</div>
+            </div>
+            <div class="premium-service-card" style="background-image: url('https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?auto=format&fit=crop&w=500&q=80');">
+                <div class="text-banner">Laptop</div>
+            </div>
+            <div class="premium-service-card" style="background-image: url('https://images.unsplash.com/photo-1547082299-de196ea013d6?auto=format&fit=crop&w=500&q=80');">
+                <div class="text-banner">Desktop</div>
+            </div>
+            <div class="premium-service-card" style="background-image: url('https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?auto=format&fit=crop&w=500&q=80');">
+                <div class="text-banner">Accessories</div>
+            </div>
+            <div class="premium-service-card" style="background-image: url('https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=500&q=80');">
+                <div class="text-banner">Cloud Storage</div>
+            </div>
+            <div class="premium-service-card" style="background-image: url('https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&w=500&q=80');">
+                <div class="text-banner">CCTV</div>
+            </div>
+            <div class="premium-service-card" style="background-image: url('https://images.unsplash.com/photo-1614064641938-3bbee52942c7?auto=format&fit=crop&w=500&q=80');">
+                <div class="text-banner">Biometrics</div>
+            </div>
+            <div class="premium-service-card" style="background-image: url('https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=500&q=80');">
+                <div class="text-banner">Firewall</div>
+            </div>
+            <div class="premium-service-card" style="background-image: url('https://images.unsplash.com/photo-1629654297299-c8506221ca97?auto=format&fit=crop&w=500&q=80');">
+                <div class="text-banner">AMC Services</div>
+            </div>
+            <div class="premium-service-card" style="background-image: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=500&q=80');">
+                <div class="text-banner">And Many More</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-container team-section">
+        <h2 class="section-title">About Us</h2>
+        <p class="section-subtitle">The technical minds driving operations and system reliability at Premium IT Forest.</p>
+        <div class="team-grid">
+            <div class="team-card">
+                <h3>Israfil Ali Middey</h3>
+                <p>Founder</p>
+            </div>
+            <div class="team-card">
+                <h3>Faiz Alam</h3>
+                <p>Co-Founder</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-container why-choose-us">
+        <h2 class="section-title">Why Choose Us</h2>
+        <p class="section-subtitle">Uncompromising standards in commercial technology maintenance and response speeds.</p>
+        
+        <div class="highlights-grid">
+            <div class="highlight-item">
+                <div class="badge-icon"><i class="fa-solid fa-indian-rupee-sign"></i></div>
+                <h3>No Fix, No Fee</h3>
+                <p style="font-size:13px; color:var(--gray); margin-top:10px;">Absolute transparency. You only settle commercial service billing once parameters are successfully verified.</p>
+            </div>
+            <div class="highlight-item">
+                <div class="badge-icon"><i class="fa-solid fa-bolt"></i></div>
+                <h3>Rapid SLA Response</h3>
+                <p style="font-size:13px; color:var(--gray); margin-top:10px;">Minimizing operations downtime with prompt diagnostic field dispatches directly to your commercial footprint.</p>
+            </div>
+            <div class="highlight-item">
+                <div class="badge-icon"><i class="fa-solid fa-shield-heart"></i></div>
+                <h3>30-Day Support Warranty</h3>
+                <p style="font-size:13px; color:var(--gray); margin-top:10px;">Every deployment or architecture overhaul comes backed by a comprehensive tracking warranty.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-container" style="padding-bottom: 40px; background: #fafafa;">
+        <h2 class="section-title">Strategic Networks</h2>
+        <p class="section-subtitle">Providing cross-platform hardware sales, authentic product sourcing, and system support.</p>
+        
+        <div class="marquee-wrapper">
+            <div class="marquee-content">
+                <h4>HEWLETT PACKARD</h4><h4>ASUS</h4><h4>ACER</h4><h4>LENOVO</h4><h4>D-LINK</h4><h4>CANON</h4><h4>GIGABYTE</h4>
+                <h4>HEWLETT PACKARD</h4><h4>ASUS</h4><h4>ACER</h4><h4>LENOVO</h4><h4>D-LINK</h4><h4>CANON</h4><h4>GIGABYTE</h4>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h3 style="color:#fff; font-size:20px; font-weight:600; margin-bottom:15px;">Premium IT Forest</h3>
+                <p style="line-height:1.7;">Delivering enterprise-grade computer infrastructure optimization, network security parameters, and professional surveillance systems across corporate West Bengal.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Corporate Footprint</h3>
+                <p><i class="fa-solid fa-location-dot"></i> 7/1H Abinash Chowdhury Lane,<br>Kolkata - 700046, West Bengal</p>
+                <p><i class="fa-solid fa-envelope"></i> premiumitforest@gmail.com</p>
+            </div>
+            <div class="footer-col">
+                <h3>Operational Desks</h3>
+                <p><i class="fa-solid fa-phone"></i> +91 99031 45769</p>
+                <p><i class="fa-solid fa-phone"></i> +91 87777 10075</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div>&copy; 2026 Premium IT Forest. All Rights Reserved. Owned by Israfil Ali Middey & Faiz Alam.</div>
+            <div>SEO Managed Infrastructure via GitHub</div>
+        </div>
+    </footer>
+
+</body>
+</html>
